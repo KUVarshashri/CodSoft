@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&display=swap">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(pic6.jpg);
+           
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        input[type="date"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Header styles */
+        header {
+            width: 100%;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(piic.jpg);
+            background-size: auto;
+            font-family: "Times New Roman", Times, serif;
+            position: relative;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .logo {
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+
+        .menu a, .register a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 25px;
+            transition: background 0.4s, border 0.4s;
+        }
+
+        .menu a:hover, .register a:hover {
+            border: 1px solid indianred;
+            background: transparent;
+        }
+
+        .register a {
+            background: indianred;
+        }
+
+        .h-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 650px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .h-text span {
+            letter-spacing: 5px;
+        }
+
+        .h-text h1 {
+            font-size: 3.5em;
+        }
+
+        .h-text a {
+            background: indianred;
+            padding: 10px 20px;
+            color: #fff;
+            letter-spacing: 5px;
+        }
+
+        /* About section styles */
+        #about {
+            margin-top: 50px;
+            padding: 20px;
+            background-image: url('piic.webp'); 
+            background-size: cover;
+            background-position: center;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #about h2 {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            color: #fff;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Contact section styles */
+        #contact {
+            margin-top: 50px;
+            padding: 20px;
+            background-image: url('pic7.jpg'); 
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #contact h2 {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            color: #fff;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        #contact form {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #contact form label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        #contact form input[type="text"],
+        #contact form input[type="email"],
+        #contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #contact form textarea {
+            height: 150px;
+        }
+
+        #contact form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Pathfinder Portal</div>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="register">
+                <a href="#reg">Register</a>
+            </div>
+        </nav>
+        <section class="h-text">
+            <span>Partake</span>
+            <h1>Embrace the wonders of the world</h1>
+            <br>
+            <span>Explore Today</span>
+        </section>
+    </header>
+
+    <div id="reg" class="container">
+        <h2>Tourist Registration for Hill Stations</h2>
+        <form action="registration_submit.php" method="post">
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" required><br>
+            
+            <label for="hillstation">Select Hill Station:</label><br>
+            <select id="hillstation" name="hillstation" required>
+                <option value="">Select a hill station</option>
+                <option value="Grindelwald, Switzerland">Grindelwald, Switzerland</option>
+                <option value="Lecco, Italy">Lecco, Italy</option>
+                <option value="Hallstatt, Austria">Hallstatt, Austria</option>
+                <option value="Srinagar, India">Srinagar, India</option>
+                <option value="Dalat, Vietnam">Dalat, Vietnam</option>
+                <option value="Faroe Island, Denmark">Faroe Island, Denmark</option>
+                <option value="Fussen, Germany">Fussen, Germany</option>
+                <option value="Queenstown, New Zealand">Queenstown, New Zealand</option>
+                <option value="Cypress Hills, Canada">Cypress Hills, Canada</option>
+                <option value="Fairbanks, Alaska">Fairbanks, Alaska</option>
+                <!-- Additional popular hill stations -->
+                <option value="Zermatt, Switzerland">Zermatt, Switzerland</option>
+                <option value="Chamonix, France">Chamonix, France</option>
+                <option value="Banff, Canada">Banff, Canada</option>
+                <option value="Innsbruck, Austria">Innsbruck, Austria</option>
+                <option value="Munnar, India">Munnar, India</option>
+                <option value="Yosemite, USA">Yosemite, USA</option>
+                <option value="Mt. Fuji, Japan">Mt. Fuji, Japan</option>
+                <!-- Add more hill stations as needed -->
+            </select><br>
+            
+            <label for="checkin">Check-in Date:</label><br>
+            <input type="date" id="checkin" name="checkin" required><br>
+            
+            <label for="checkout">Check-out Date:</label><br>
+            <input type="date" id="checkout" name="checkout" required><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="about" class="container">
+        <h2>About Us</h2>
+        <p>Welcome to our Tourist Registration Website! We are dedicated to providing a seamless experience for tourists who want to explore the most beautiful hill stations around the world.</p>
+        <p>Our mission is to make the process of registering for your next adventure simple and hassle-free. Whether you're planning a trip to the majestic Alps in Switzerland, the serene backwaters of Kerala in India, or the picturesque landscapes of New Zealand, we've got you covered.</p>
+        <p>With our easy-to-use registration system, you can select your desired hill station, choose your dates, and complete your registration in just a few clicks. Say goodbye to long queues and paperwork!</p>
+        <p>At Tourist Registration Website, we're passionate about travel and committed to helping you make unforgettable memories. Start your journey with us today!</p>
+    </div>
+
+    <div id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, please feel free to contact us using the form below:</p>
+        <form action="submit_contact.php" method="post">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+</body>
+</html>
